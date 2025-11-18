@@ -6,7 +6,7 @@ get_pswd(){
 
 
 
-ssh  edgar@192.168.1.152 << EOF| tail -n 1
+ssh  edgar@[ip_address] << EOF| tail -n 1
 cd databases
 
 pswd_sql=\$(sqlite3 bandit.db "SELECT pswd FROM passwords WHERE levelTo = $1;") 
